@@ -10,6 +10,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: url("img/cursor.cur"), auto;
     min-height: 100vh;
     height: 100vh;
     overflow: hidden;
@@ -39,6 +40,10 @@ h4 {
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
+}
+
+a:hover {
+    cursor: url("img/cursor-link.cur"), pointer;
 }
 
 .topmain {
@@ -128,6 +133,7 @@ button {
 }
 
 button:hover {
+    cursor: url("img/cursor-link.cur"), pointer;
     background-color: #795fad;
 }
 
@@ -166,6 +172,7 @@ button:active {
 
 .ucard:hover {
     background: rgba(255, 255, 255, 0.5);
+    cursor: url("img/cursor-link.cur"), pointer;
 }
 
 .ucard img {
@@ -177,14 +184,6 @@ button:active {
     padding-bottom: 6px;
 }
 
-.select-box {
-    position: absolute;
-    border: 1px solid rgba(100, 150, 255, 0.9);
-    background: rgba(100, 150, 255, 0.7);
-    pointer-events: none;
-    /* so it doesn't block clicks */
-}
-
 .deskmain {
     display: flex;
     align-items: flex-start;
@@ -192,17 +191,81 @@ button:active {
     height: 100vh;
 }
 
-
 .albumjpg {
+    max-width: max-content;
+    min-height: auto;
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .albmbtns {
     flex-direction: column;
     margin: 12px;
+    text-align: center;
 }
 
+.boobleui {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.boobleaiwindow {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    background-color: rgb(212, 212, 212);
+    max-height: max-content;
+    width: 60%;
+    right: 10%;
+    left: auto;
+    bottom: auto;
+    top: 20%;
+}
+
+.boobleaiwindow img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-block-size: 144px;
+    padding: 8px;
+}
+
+.boobleaiwindow p {
+    padding: 4px;
+    flex: auto;
+    font-size: 16px;
+    padding: auto;
+}
+
+.boobleaiwindow input {
+    color: #ddd;
+    outline: none;
+    resize: none;
+    height: 24px;
+    width: 360px;
+    background: #222;
+    margin: 2px;
+    border: rgba(255, 255, 255, 0.5);
+}
+
+.boobleaiwindow button {
+    background-color: #66898f;
+    margin: 2px;
+    max-height: min-content;
+    min-width: max-content;
+}
+
+.boobleaiwindow h4 {
+    font-family: "STIX Two Math", serif;
+    max-height: min-content;
+    min-width: max-content;
+    color: #111;
+    font-size: 20px;
+    background-color: rgb(200, 200, 200);
+    text-align: center;
+}
